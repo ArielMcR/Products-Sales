@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'FonteHeader';
+    src: url('./fonts/Moving\ Skate.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TextHomePage';
+    src: url('./fonts/Bombing.ttf') format('truetype');
+}
