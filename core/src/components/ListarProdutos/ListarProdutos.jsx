@@ -1,12 +1,28 @@
-import { useForm } from "react-hook-form"
-import { useRef, useState } from "react"
-import Header from "../Header"
-import { Filter } from 'lucide-react';
-import Footer from "../Footer/Footer"
-import { NumericFormat } from "react-number-format"
+import { ArrowDownNarrowWide, Filter, ArrowUpAZ, ArrowUpNarrowWide, ArrowDownAZ } from 'lucide-react';
+import { NumericFormat } from "react-number-format";
+import Footer from "../Footer/Footer";
+import Header from "../Header";
+import { useState } from "react"
+import { Card, CardContent, CardDescription, CardFooter, CardTitle, CardHeader } from "../ui/card";
 export default function ListarProdutos() {
+    const [priceMintoMax, setPriceMintoMax] = useState(0)
+    const [nameAtoZ, setNameAtoZ] = useState(0)
 
+    const [produtos, setProdutos] = useState([1, 2, 3, 4, 5, 6])
 
+    const ChangeArrowDownWide = () => {
+        if (priceMintoMax === 0) {
+            return setPriceMintoMax(1)
+        }
+        return setPriceMintoMax(0)
+    }
+
+    const ChangeArrowUpAZ = () => {
+        if (nameAtoZ === 0) {
+            return setNameAtoZ(1)
+        }
+        return setNameAtoZ(0)
+    }
 
     // const formValues = useForm()
 
@@ -96,7 +112,28 @@ export default function ListarProdutos() {
                     </div >
                 </div>
                 <div className="produtos col-span-3 bg-yellow-500">
-                    teste
+                    <div className="header-produtos w-full bg-gray-200 h-10 flex items-center justify-end ">
+                        <button className="mr-5" onClick={ChangeArrowDownWide}>{priceMintoMax ? <ArrowDownNarrowWide color="#737373" /> : <ArrowUpNarrowWide color="#737373" />}</button>
+                        <button className="mr-4" onClick={ChangeArrowUpAZ}>{nameAtoZ ? <ArrowUpAZ color="#737373" /> : <ArrowDownAZ color="#737373" />}</button>
+                    </div>
+                    <div className="cards grid grid-cols-3 gap-2">
+                        {produtos.map((produtos) => (
+                            <Card className="mt-2">
+                                <CardHeader>
+                                    <CardTitle>Card Title</CardTitle>
+                                    <CardDescription>Card Description</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <p>Card Content</p>
+                                </CardContent>
+                                <CardFooter>
+                                    <p>Card Footer</p>
+                                </CardFooter>
+                            </Card>
+
+                        ))}
+
+                    </div>
                 </div>
             </section>
             <Footer />
