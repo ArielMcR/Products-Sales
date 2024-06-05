@@ -16,6 +16,7 @@ import { FaUserCircle } from "react-icons/fa";
 import '../index.css'
 import { Link } from 'react-router-dom'
 
+
 const products = [
     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
     { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
@@ -118,7 +119,7 @@ export default function Header() {
                     <Link to={'/'} className="text-sm font-semibold leading-6 text-gray-900">
                         Novidades
                     </Link>
-                    <Link to={'/'} className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link to={'/ListarProdutos'} className="text-sm font-semibold leading-6 text-gray-900">
                         Estoque
                     </Link>
                     <Link to={'/'} className="text-sm font-semibold leading-6 text-gray-900">

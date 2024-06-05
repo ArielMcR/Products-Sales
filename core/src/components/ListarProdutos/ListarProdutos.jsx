@@ -30,14 +30,14 @@ export default function ListarProdutos() {
     return (
         <>
             <Header />
-            <section className="grid grid-cols-4 gap-2 h-full">
-                <div className="form-esquerda col-span-1 rounded-sm mt-10 flex flex-col items-center ">
+            <section className="grid grid-cols-4 gap-2 h-full bg-gray-100">
+                <div className="form-esquerda col-span-1 rounded-sm mt-5 flex flex-col items-center ">
                     <div className="filtrar bg-sky-500 w-[23.3rem] text-center rounded-t-xl h-10">
                         <h3 className="text-white text-2xl font-normal pt-1">
                             Filtrar Produtos
                         </h3>
                     </div>
-                    <div className="filtros  border-black border-x-[1px] border-b-[1px]">
+                    <div className="filtros  border-black border-x-[1px] border-b-[1px] rounded-b-lg ">
 
                         <form action="" className="m-5">
                             <label htmlFor="marca" className="text-black "> Marca:</label><br />
@@ -111,7 +111,7 @@ export default function ListarProdutos() {
                         </form>
                     </div >
                 </div>
-                <div className="produtos col-span-3 bg-yellow-500">
+                <div className="produtos col-span-3 bg-gray-100">
                     <div className="header-produtos w-full bg-gray-200 h-10 flex items-center justify-end ">
                         <button className="mr-5" onClick={ChangeArrowDownWide}>{priceMintoMax ? <ArrowDownNarrowWide color="#737373" /> : <ArrowUpNarrowWide color="#737373" />}</button>
                         <button className="mr-4" onClick={ChangeArrowUpAZ}>{nameAtoZ ? <ArrowUpAZ color="#737373" /> : <ArrowDownAZ color="#737373" />}</button>

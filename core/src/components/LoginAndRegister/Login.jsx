@@ -54,7 +54,7 @@ export default function Login() {
                     <Link to={"/"}>
                         <div className="sm:mx-auto sm:w-full sm:max-w-sm flex items-center justify-center">
                             <IoMdCube size={75} color={'#0C0624'} />
-                            <span className="font-personalizada text-8xl ml-4">Cubiist</span>
+                            <span className="font-personalizada text-8xl ml-4 text-black">Cubiist</span>
 
                         </div>
                     </Link>
